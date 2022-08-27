@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    int ar[n][m], be[n][m], cf[n][m];
+    cout << "enter 2d arrray\n";
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cin >> ar[i][j]; 
+        }
+    }
+    int val;
+    cin>>val;
+    int count=0;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            if(ar[i][j]==val)
+            {
+                count++;
+                cout<<i<<" "<<j<<endl;
+            }
+        }
+    }
+    if(count==0)
+    {
+        cout<<"not found";
+    }
+    else
+    {
+        cout<<"found";
+    }
+    
+    return 0;
+}
