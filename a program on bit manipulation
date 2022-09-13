@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+int getbit(int n,int push)
+{
+    return (n&(1<<push))!=0;
+}
+int setbit(int n,int push)
+{
+    return (n | (1<<push));
+}
+int clearbit(int n,int push)
+{
+    int m = ~(1<<push);
+    return (n & m);
+}
+int updatebit(int n,int push)
+{
+    int m = ~(1<<push);
+    n = n & m ;
+    return ( n | (1<<push) );
+}
+int main()
+{
+    cout<<getbit(5,2)<<endl;
+    cout<<setbit(5,1)<<endl;
+    cout<<clearbit(5,2)<<endl;
+    cout<<updatebit(5,1)<<endl;
+    return 0;
+}
